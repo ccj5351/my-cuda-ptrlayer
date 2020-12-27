@@ -31,7 +31,9 @@ __device__ inline int end_index(int a, int b, int c) {
   return (int)std::ceil((float)((a + 1) * c) / b);
 }
 
+/* CCJ: See how to map 4D tensor to GPU threads*/
 // 4d tensor B x D x H x W
+
 
 /*
  * Description:

@@ -1,5 +1,6 @@
 # C++/CUDA Extensions in PyTorch
-> see: https://github.com/pytorch/extension-cpp
+
+> see: Copied from https://github.com/pytorch/extension-cpp, by [Peter Goldsborough](https://github.com/goldsborough).
 
 An example of writing a C++ extension for PyTorch. See
 [here](http://pytorch.org/tutorials/advanced/cpp_extension.html) for the accompanying tutorial.
@@ -13,6 +14,7 @@ There are a few "sights" you can metaphorically visit in this repository:
 - Run gradient checks on the code by running `python grad_check.py {py, cpp, cuda} [--cuda]`.
 - Run output checks on the code by running `python check.py {forward, backward} [--cuda]`.
 
-## Authors
+## Mapping a 4D Torch Tensor to GPU Threads
 
-[Peter Goldsborough](https://github.com/goldsborough)
+- Example 1: AdaptiveMaxPooling2d, copied from [here](https://raw.githubusercontent.com/pytorch/pytorch/master/aten/src/ATen/native/cuda/AdaptiveMaxPooling2d.cu).
+- Example 2: AveragePool2d, copied from [here](https://github.com/pytorch/pytorch/blob/master/aten/src/ATen/native/cuda/AveragePool2d.cu).

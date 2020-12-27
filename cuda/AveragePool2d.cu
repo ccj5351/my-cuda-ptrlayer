@@ -25,6 +25,10 @@ __device__ inline int max(int a, int b) {
   return a >= b ? a : b;
 }
 
+/* CCJ: See how to map 4D tensor to GPU threads*/
+
+
+
 template <typename scalar_t, typename accscalar_t>
 __global__ void avg_pool2d_out_cuda_frame(const int nthreads,
     const scalar_t* const bottom_data, const int num, const int channels,
